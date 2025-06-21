@@ -16,12 +16,6 @@ const NFTCollectionSection: React.FC = () => {
       color: "from-purple-400 to-pink-500"
     },
     {
-      icon: Gem,
-      title: "Utility Benefits",
-      description: "Holders gain access to exclusive community features and rewards",
-      color: "from-cyan-400 to-blue-500"
-    },
-    {
       icon: Star,
       title: "Limited Edition",
       description: "Only 200 unique pixel pirates will ever be minted - truly exclusive collection",
@@ -30,10 +24,10 @@ const NFTCollectionSection: React.FC = () => {
   ];
 
   const nftImages = [
-    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/14.png", alt: "Pirate NFT #1" },
-    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/20.png", alt: "Pirate NFT #2" },
-    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/38.png", alt: "Pirate NFT #3" },
-    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/47.png", alt: "Pirate NFT #4" }
+    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/14.png"},
+    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/20.png"},
+    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/38.png"},
+    { src: "https://tomato-worthwhile-flamingo-312.mypinata.cloud/ipfs/bafybeigthccfxcviobsqmziv66eqjwpe4sif4zerilp5274emncdl3uu6y/47.png" }
   ];
 
   return (
@@ -70,20 +64,13 @@ const NFTCollectionSection: React.FC = () => {
                   <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-2 border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 shadow-2xl">
                     <img
                       src={nft.src}
-                      alt={nft.alt}
+                      
                       className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                       style={{ imageRendering: 'pixelated' }}
                     />
                     {/* Glowing overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
-                    {/* NFT info overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
-                      <div className="text-center">
-                        <p className="text-cyan-300 font-bold text-sm">{nft.alt}</p>
-                        <p className="text-gray-300 text-xs">Rarity: {['Common', 'Rare', 'Epic', 'Legendary'][index]}</p>
-                      </div>
-                    </div>
 
                     {/* Rarity indicator */}
                     <div className="absolute top-3 right-3">
