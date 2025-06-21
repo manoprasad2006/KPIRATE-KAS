@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
+  { name: 'Home', href: '/' },
   { name: 'About', href: '#about' },
   { name: 'Tokenomics', href: '#tokenomics' },
   { name: 'Roadmap', href: '#roadmap' },
+  { name: 'NFT', href: '#nft-collection' },
   { name: 'Community', href: '#community' },
   { name: 'Donate', href: '#donate' },
+  { name: 'Whitepaper', href: '/whitepaper' },
 ];
 
 const Navbar: React.FC = () => {
@@ -16,20 +19,30 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur border-b border-cyan-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 text-2xl font-bold text-cyan-400">
-          <img src="/favi.ico" alt="KPIRATE Logo" className="h-14 w-14 rounded-full" />
-          <span className="hidden sm:inline font-pirata tracking-wider">KPIRATE</span>
-        </a>
+        <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-cyan-400">
+          <img src="/favi-inv.png" alt="KASPIRATE Logo" className="h-14 w-14 rounded-full" />
+          <span className="hidden sm:inline font-pirata tracking-wider">KASPIRATE</span>
+        </Link>
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 items-center">
           {navLinks.map(link => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-lg font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
-            >
-              {link.name}
-            </a>
+            link.href.startsWith('#') ? (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-lg font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
         {/* Mobile Hamburger */}
@@ -52,14 +65,25 @@ const Navbar: React.FC = () => {
         <div className="md:hidden bg-black/95 border-t border-cyan-900 px-4 pb-4">
           <div className="flex flex-col gap-4 mt-2">
             {navLinks.map(link => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-lg font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.name}
-              </a>
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-lg font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-lg font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
         </div>

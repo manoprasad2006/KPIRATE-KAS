@@ -1,12 +1,13 @@
 import React from 'react';
 import { Ship, Flag, Gem, Flame } from 'lucide-react';
 import AnimatedDashedLine from './AnimatedDashedLine';
+import { FaTelegramPlane, FaXTwitter } from 'react-icons/fa';
 
 const RoadmapSection: React.FC = () => {
   const roadmapPhases = [
     {
       icon: Ship,
-      quarter: "Q1 2025",
+      quarter: "Q2 2025",
       title: "Setting Sail",
       items: [
         "Launch on Kaspa Network",
@@ -18,44 +19,43 @@ const RoadmapSection: React.FC = () => {
     },
     {
       icon: Flag,
-      quarter: "Q2 2025", 
+      quarter: "Q3 2025", 
       title: "Raising the Flag",
       items: [
         "CEX Listings",
         "Community Raids & Marketing",
         "Partnership Announcements",
-        "Staking Mechanism"
+        "First NFT Collection Launch"
       ],
       color: "from-yellow-400 to-yellow-500"
     },
     {
       icon: Gem,
-      quarter: "Q3 2025",
+      quarter: "Q4 2025",
       title: "Treasure Hunt",
       items: [
-        "NFT Collection Launch",
-        "Pirate Game Development",
-        "Cross-chain Integration",
-        "Mobile App Beta"
+        "Airdrop Campaigns",
+        "Genesis NFT Collection",
+        "International Channels",
+        "Cross-chain Integration"
       ],
       color: "from-red-400 to-red-500"
     },
     {
       icon: Flame,
-      quarter: "Q4 2025",
+      quarter: "2026",
       title: "Legend Status",
       items: [
-        "DAO Implementation",
-        "Merchandise Store",
-        "GameFi Features",
-        "Global Expansion"
+        "Cooperations",
+        "Community Challenges & Contests",
+        "Burn Events, Airdrops & Many More"
       ],
       color: "from-purple-400 to-purple-500"
     }
   ];
 
   return (
-    <section className="relative py-32 px-6 bg-gradient-to-b from-gray-900 to-black">
+    <section id="roadmap" className="relative py-32 px-6 bg-gradient-to-b from-gray-900 to-black">
       {/* Background ocean voyage image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -103,7 +103,7 @@ const RoadmapSection: React.FC = () => {
           {roadmapPhases.map((phase, index) => (
             <div
               key={index}
-              className="group relative animate-on-scroll"
+              className={`group relative animate-on-scroll${index < 3 ? ' pt-8' : ''}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Island/location design */}

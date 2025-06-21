@@ -17,11 +17,11 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Background pirate ship image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/bg-pir.png"
+          src="/main-one.png"
           alt="Pirate ship on dark waters"
           className="w-full h-full object-contain object-center opacity-90"
         />
@@ -34,8 +34,8 @@ const HeroSection: React.FC = () => {
         <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
           <div className="mb-8 w-full">
             <h1 className="text-7xl md:text-9xl font-bold mb-6 relative">
-              <span className="font-pirata text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-yellow-400 to-red-500 animate-pulse">
-                KPIRATE
+              <span className="font-pirata text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-yellow-400 to-red-500">
+                KASPIRATE
               </span>
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400/20 to-transparent blur-2xl rounded-full"></div>
             </h1>
@@ -43,33 +43,38 @@ const HeroSection: React.FC = () => {
               Join the Crew. Own the Journey.
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-              Sail into the future with KPIRATE - where blockchain meets the high seas. 
+              Sail into the future with KASPIRATE - where blockchain meets the high seas. 
               Built on Kaspa's lightning-fast network for true digital treasure.
             </p>
           </div>
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start items-center mb-16 w-full">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/50">
-              <span className="relative z-10 flex items-center gap-3">
-                <Navigation className="w-6 h-6" />
-                Start Your Voyage
-              </span>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </button>
-            <button className="group relative px-8 py-4 border-2 border-yellow-400 rounded-full font-bold text-xl text-yellow-400 transition-all duration-300 hover:bg-yellow-400 hover:text-black hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/50">
-              <span className="flex items-center gap-3">
-                <MessageCircle className="w-6 h-6" />
-                Join Telegram Crew
-              </span>
-            </button>
+            <a
+              href="https://www.kaspa.com/tokens/marketplace/token/KPRAT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/50 flex items-center gap-3 justify-center"
+            >
+              <Navigation className="w-6 h-6" />
+              Start Your Voyage
+            </a>
+            <a
+              href="https://t.me/kaspiratecoin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-8 py-4 border-2 border-yellow-400 rounded-full font-bold text-xl text-yellow-400 transition-all duration-300 hover:bg-yellow-400 hover:text-black hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/50 flex items-center gap-3 justify-center"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Join Telegram Crew
+            </a>
           </div>
         </div>
         {/* Hero Image Gallery - Right */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
           <div className="relative md:ml-16">
             <img 
-              src="/favi.png" 
-              alt="KPIRATE Hero" 
+              src="/favi-inv.png" 
+              alt="KASPIRATE Hero" 
               className="w-96 h-96 md:w-[32rem] md:h-[32rem] object-contain transition-transform duration-300 hover:scale-105 rounded-xl bg-black/20"
               style={{maxWidth: '100%', height: 'auto'}}
             />
@@ -78,15 +83,6 @@ const HeroSection: React.FC = () => {
         {/* Scroll indicator (keep at bottom center) */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ArrowDown className="w-8 h-8 text-cyan-400" />
-          <div className="flex gap-1 mt-2">
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={i}
-                className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
-                style={{ animationDelay: `${i * 0.2}s` }}
-              />
-            ))}
-          </div>
         </div>
       </div>
 
@@ -97,37 +93,13 @@ const HeroSection: React.FC = () => {
           transform: `translate(${mousePosition.x}px, ${mousePosition.y}px) rotateY(${mousePosition.x / 5}deg)`
         }}
       >
-        <div className="w-96 h-96 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-transparent opacity-50 rounded-full blur-3xl animate-pulse"></div>
-          <svg viewBox="0 0 400 400" className="w-full h-full">
-            <path
-              d="M50,300 L150,200 L250,180 L350,200 L320,300 L280,320 L100,320 Z"
-              className="fill-cyan-400 opacity-60"
-              stroke="#00F6FF"
-              strokeWidth="2"
-            />
-            <path
-              d="M200,50 L220,180 L180,180 Z"
-              className="fill-yellow-400 opacity-80"
-              stroke="#FFD700"
-              strokeWidth="2"
-            />
-            {/* Animated flag */}
-            <path
-              d="M220,50 L300,70 L290,120 L220,100 Z"
-              className="fill-red-600"
-              stroke="#D72638"
-              strokeWidth="1"
-            >
-              <animateTransform
-                attributeName="transform"
-                type="scale"
-                values="1,1;1.05,0.98;1,1"
-                dur="3s"
-                repeatCount="indefinite"
-              />
-            </path>
-          </svg>
+        <div className="w-96 h-96 relative flex items-center justify-center">
+          <img
+            src="/ship-dall.png"
+            alt="Animated Pirate Ship"
+            className="w-80 h-80 object-contain animate-float drop-shadow-2xl"
+            style={{ pointerEvents: 'none' }}
+          />
         </div>
       </div>
 

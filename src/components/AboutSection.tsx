@@ -26,7 +26,7 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 py-20 px-6 overflow-hidden">
+    <section id="about" className="relative min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 py-20 px-6 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl"></div>
@@ -41,7 +41,7 @@ const AboutSection: React.FC = () => {
             <span className="text-red-300 font-semibold">About Our Crew</span>
           </div>
 
-          <h2 className="text-6xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-yellow-400 to-red-400">
+          <h2 className="text-6xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-yellow-400 to-red-400 leading-[1.2] pb-2">
             Not just another meme coin.
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold text-red-400 mb-8">
@@ -57,9 +57,9 @@ const AboutSection: React.FC = () => {
         <div className="mb-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
             {[
-              { img: "/17.png", color: "from-purple-500 to-pink-600", shadow: "shadow-purple-500/25", title: "The Young Pirate", subtitle: "Every legend has a beginning." },
-              { img: "/about-bino.png", color: "from-green-400 to-emerald-600", shadow: "shadow-green-500/25", title: "The Lookout", subtitle: "Eyes on the horizon for new adventures." },
-              { img: "/about-wanted.png", color: "from-blue-400 to-indigo-600", shadow: "shadow-blue-500/25", title: "Pirate Image 3", subtitle: "" }
+              { img: "/bike-pir.jpg", color: "from-purple-500 to-pink-600", shadow: "shadow-purple-500/25", title: "Ride into the Dawn", subtitle: "Fearless and fast, Kaspirate rides on 10BPS." },
+              { img: "/about-sec.jpg", color: "from-green-400 to-emerald-600", shadow: "shadow-green-500/25", title: "Echo on the GhostDAG", subtitle: " Born from the shadows of the chain, the DAG speaks to him." },
+              { img: "/wantedd.jpg", color: "from-blue-400 to-indigo-600", shadow: "shadow-blue-500/25", title: "Most Wanted on the Chain", subtitle: "Built by the community, feared by the constitution." }
             ].map((item, index) => (
               <div
                 key={index}
@@ -101,7 +101,7 @@ const AboutSection: React.FC = () => {
         <div className="mb-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "10K+", label: "Crew Members", icon: <Users className="w-10 h-10 mx-auto text-cyan-400" /> },
+              { number: "<1K", label: "Crew Members", icon: <Users className="w-10 h-10 mx-auto text-cyan-400" /> },
               { number: "100%", label: "Decentralized", icon: <Anchor className="w-10 h-10 mx-auto text-yellow-400" /> },
               { number: "24/7", label: "Community Driven", icon: <Shield className="w-10 h-10 mx-auto text-red-400" /> },
               { number: "∞", label: "Adventure Awaits", icon: <Zap className="w-10 h-10 mx-auto text-cyan-300" /> }
@@ -125,7 +125,7 @@ const AboutSection: React.FC = () => {
             <div className="relative">
               <div className="w-full h-[500px] relative overflow-hidden rounded-3xl shadow-2xl group">
                 <img 
-                  src="/about-main.png"
+                  src="/tyt.jpg"
                   alt="Digital treasure and blockchain"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -141,7 +141,7 @@ const AboutSection: React.FC = () => {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-black/70 backdrop-blur-sm rounded-xl p-4 border border-cyan-400/30">
                     <h4 className="text-cyan-300 font-bold text-lg mb-2">The Pirate's Code</h4>
-                    <p className="text-gray-200 text-sm">"What a man can do and what a man can't do - in Web3, we decide together."</p>
+                    <p className="text-gray-200 text-sm">"No pirate sails alone—loyalty is the strongest treasure!"</p>
                   </div>
                 </div>
               </div>

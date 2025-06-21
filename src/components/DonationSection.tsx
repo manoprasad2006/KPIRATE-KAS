@@ -12,7 +12,7 @@ const DonationSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-32 px-6 bg-gradient-to-b from-black to-gray-900">
+    <section id="donate" className="relative py-32 px-6 bg-gradient-to-b from-black to-gray-900">
       {/* Background treasure room image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -39,7 +39,7 @@ const DonationSection: React.FC = () => {
           <div className="relative group cursor-pointer transition-all duration-300">
             <div className="w-full aspect-square flex items-center justify-center rounded-2xl overflow-hidden border border-yellow-400/30 shadow-lg group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
               <img 
-                src="/don-1.png" 
+                src="/dona-2.jpg" 
                 alt="Fuel 1" 
                 className="w-full h-full object-cover rounded-2xl transition-all duration-300" 
               />
@@ -50,7 +50,7 @@ const DonationSection: React.FC = () => {
           <div className="relative group cursor-pointer transition-all duration-300">
             <div className="w-full aspect-square flex items-center justify-center rounded-2xl overflow-hidden border border-yellow-400/30 shadow-lg group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
               <img 
-                src="/don-2.png" 
+                src="/dona-1.jpg" 
                 alt="Fuel 2" 
                 className="w-full h-full object-cover rounded-2xl transition-all duration-300" 
               />
@@ -61,7 +61,7 @@ const DonationSection: React.FC = () => {
           <div className="relative group cursor-pointer transition-all duration-300">
             <div className="w-full aspect-square flex items-center justify-center rounded-2xl overflow-hidden border border-yellow-400/30 shadow-lg group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
               <img 
-                src="/don-3.png" 
+                src="/dona-3.jpg" 
                 alt="Fuel 3" 
                 className="w-full h-full object-cover rounded-2xl transition-all duration-300" 
               />

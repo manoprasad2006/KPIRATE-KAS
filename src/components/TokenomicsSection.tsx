@@ -32,7 +32,7 @@ const TokenomicsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-32 px-6">
+    <section id="tokenomics" className="relative py-32 px-6">
       {/* Background treasure vault image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -56,9 +56,9 @@ const TokenomicsSection: React.FC = () => {
         {/* Tokenomics Image Gallery */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 animate-on-scroll">
           {[
-            { img: "/toke-map1.png", title: "Total Supply", value: "1,000,000,000 KPRAT", desc: "Fixed supply, no more coins will ever be minted." },
-            { img: "/toke-loot.png", title: "Liquidity Locked", value: "100%", desc: "All liquidity permanently locked for security." },
-            { img: "/toke-1.png", title: "Community Allocation", value: "90%", desc: "Fair distribution to the pirate crew." }
+            { img: "/chart.jpg", title: "Total Supply", value: "1,000,000,000 KPRAT", desc: "Fixed supply, no more coins will ever be minted." },
+            { img: "/mapglow.jpg", title: "Liquidity Locked", value: "100%", desc: "All liquidity permanently locked for security." },
+            { img: "/picc.jpg", title: "Community Allocation", value: "90%", desc: "Fair distribution to the pirate crew." }
           ].map((item, idx) => (
             <div key={idx} className="relative group cursor-pointer rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-2 border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105">
               <img 
@@ -158,12 +158,12 @@ const TokenomicsSection: React.FC = () => {
           <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-gradient-to-r from-red-900/50 to-red-800/50 border border-red-500/30">
             <div className="text-2xl">⚠️</div>
             <p className="text-red-300 font-bold">
-              No Presale • No Dev Wallet • No Hidden Treasures
+              No Presale • No VC • No Hidden Treasures
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </section>  
   );
 };
 

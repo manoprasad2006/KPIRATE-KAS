@@ -29,54 +29,63 @@ const CodeSection: React.FC = () => {
           <div className="absolute -inset-8 bg-gradient-to-r from-yellow-400/10 to-red-500/10 blur-3xl rounded-full"></div>
         </div>
 
-        {/* Ancient scroll background effect */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/20 to-yellow-800/20 rounded-3xl border-2 border-yellow-600/30 backdrop-blur-sm"></div>
-          
-          {/* Decorative corners */}
-          <div className="absolute top-4 left-4">
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+        {/* CodeSection main content: image left, text right */}
+        <div className="relative flex flex-col md:flex-row items-stretch justify-center gap-12 mb-12">
+          {/* Image on the left */}
+          <div className="group flex-shrink-0 w-full md:w-1/2 flex justify-center items-center min-h-[480px] overflow-hidden rounded-2xl">
+            <img 
+              src="/pir-code.jpg" 
+              alt="Pirate Code" 
+              className="rounded-2xl shadow-lg max-w-full w-full md:w-auto md:max-w-xs lg:max-w-sm object-cover h-full min-h-[480px] transition-transform duration-500 ease-in-out transform scale-125 group-hover:scale-100"
+            />
           </div>
-          <div className="absolute top-4 right-4">
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
-          </div>
-          <div className="absolute bottom-4 left-4">
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
-          </div>
-          <div className="absolute bottom-4 right-4">
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
-          </div>
-
-          <div className="relative p-12">
-            <div className="flex justify-center mb-8">
-              <Scroll className="w-16 h-16 text-yellow-400" />
-            </div>
-
-            <div className="space-y-8">
-              {codePoints.map((point, index) => (
-                <div
-                  key={index}
-                  className="group cursor-pointer"
-                  style={{ animationDelay: `${index * 0.3}s` }}
-                >
-                  <div className="flex items-center justify-center gap-4 mb-4">
-                    <MapPin className="w-6 h-6 text-red-500 group-hover:scale-125 transition-transform duration-300" />
-                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-                    <MapPin className="w-6 h-6 text-red-500 group-hover:scale-125 transition-transform duration-300" />
-                  </div>
-                  
-                  <p className="text-2xl font-bold text-yellow-100 group-hover:text-yellow-400 transition-all duration-300 group-hover:scale-105">
-                    {point}
+          {/* Texts on the right */}
+          <div className="w-full md:w-1/2 flex items-center min-h-[480px]">
+            {/* Ancient scroll background effect */}
+            <div className="relative w-full">
+              <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/20 to-yellow-800/20 rounded-3xl border-2 border-yellow-600/30 backdrop-blur-sm"></div>
+              {/* Decorative corners */}
+              <div className="absolute top-4 left-4">
+                <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+              </div>
+              <div className="absolute top-4 right-4">
+                <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+              </div>
+              <div className="absolute bottom-4 left-4">
+                <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+              </div>
+              <div className="absolute bottom-4 right-4">
+                <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+              </div>
+              <div className="relative p-8 md:p-12 flex flex-col justify-center h-full min-h-[480px]">
+                <div className="flex justify-center mb-8">
+                  <Scroll className="w-16 h-16 text-yellow-400" />
+                </div>
+                <div className="space-y-8">
+                  {codePoints.map((point, index) => (
+                    <div
+                      key={index}
+                      className="group cursor-pointer"
+                      style={{ animationDelay: `${index * 0.3}s` }}
+                    >
+                      <div className="flex items-center justify-center gap-4 mb-4">
+                        <MapPin className="w-6 h-6 text-red-500 group-hover:scale-125 transition-transform duration-300" />
+                        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+                        <MapPin className="w-6 h-6 text-red-500 group-hover:scale-125 transition-transform duration-300" />
+                      </div>
+                      <p className="text-2xl font-bold text-yellow-100 group-hover:text-yellow-400 transition-all duration-300 group-hover:scale-105">
+                        {point}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                {/* Glowing signature */}
+                <div className="mt-12 pt-8 border-t border-yellow-600/30">
+                  <p className="text-lg text-yellow-300 font-pirata">
+                    — Captain KASPIRATE & The Kaspa Crew
                   </p>
                 </div>
-              ))}
-            </div>
-
-            {/* Glowing signature */}
-            <div className="mt-12 pt-8 border-t border-yellow-600/30">
-              <p className="text-lg text-yellow-300 font-pirata">
-                — Captain KPIRATE & The Kaspa Crew
-              </p>
+              </div>
             </div>
           </div>
         </div>

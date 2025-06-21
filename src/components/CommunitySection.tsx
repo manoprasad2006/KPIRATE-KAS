@@ -1,11 +1,13 @@
 import React from 'react';
-import { MessageCircle, Twitter, ExternalLink, Users } from 'lucide-react';
+import { ExternalLink, Users } from 'lucide-react';
+import { FaTelegram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const CommunitySection: React.FC = () => {
   const socialLinks = [
     {
-      icon: MessageCircle,
-      title: "Hop Aboard Telegram",
+      icon: FaTelegram,
+      title: "Hop Aboard on Telegram",
       subtitle: "Join the crew for real-time updates",
       emoji: "🚢",
       gradient: "from-blue-500 to-blue-600",
@@ -13,18 +15,18 @@ const CommunitySection: React.FC = () => {
       url: "https://t.me/kaspiratecoin"
     },
     {
-      icon: Twitter,
-      title: "Parroting Updates on X",
+      icon: FaXTwitter,
+      title: "Get Updates on X",
       subtitle: "Follow for the latest treasure maps",
       emoji: "🦜",
       gradient: "from-gray-700 to-gray-800",
       hoverGradient: "from-gray-600 to-gray-700",
-      url: "https://x.com/kaspiratecoin"
+      url: "https://x.com/kpratcoin"
     },
     {
       icon: ExternalLink,
       title: "Find Your Treasure",
-      subtitle: "Buy KPIRATE on Kaspa DEX",
+      subtitle: "Buy KASPIRATE on Kaspa DEX",
       emoji: "💰",
       gradient: "from-yellow-500 to-orange-500",
       hoverGradient: "from-yellow-400 to-orange-400",
@@ -33,7 +35,7 @@ const CommunitySection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-32 px-6">
+    <section id="community" className="relative py-32 px-6 bg-gradient-to-b from-gray-900 to-black">
       {/* Background pirate crew image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -60,9 +62,10 @@ const CommunitySection: React.FC = () => {
           <div className="relative group cursor-pointer transition-all duration-300">
             <div className="w-full aspect-[4/3] flex items-center justify-center rounded-2xl overflow-hidden border border-cyan-400/30 shadow-lg group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
               <img 
-                src="/com-crew.png" 
+                src="/jtc-1.jpg" 
                 alt="Community 1" 
                 className="w-full h-full object-cover rounded-2xl transition-all duration-300" 
+                style={{ objectPosition: 'center 30%' }}
               />
             </div>
           </div>
@@ -71,7 +74,7 @@ const CommunitySection: React.FC = () => {
           <div className="relative group cursor-pointer transition-all duration-300">
             <div className="w-full aspect-[4/3] flex items-center justify-center rounded-2xl overflow-hidden border border-cyan-400/30 shadow-lg group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
               <img 
-                src="/com-dc.png" 
+                src="jtc-2.jpg" 
                 alt="Community 2" 
                 className="w-full h-full object-cover rounded-2xl transition-all duration-300" 
               />
@@ -82,7 +85,7 @@ const CommunitySection: React.FC = () => {
           <div className="relative group cursor-pointer transition-all duration-300">
             <div className="w-full aspect-[4/3] flex items-center justify-center rounded-2xl overflow-hidden border border-cyan-400/30 shadow-lg group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
               <img 
-                src="/comm-fre.png" 
+                src="jtc-3.jpg" 
                 alt="Community 3" 
                 className="w-full h-full object-cover rounded-2xl transition-all duration-300" 
               />
@@ -115,7 +118,7 @@ const CommunitySection: React.FC = () => {
                 <div className="flex flex-col items-center text-center">
                   {/* Icon and emoji */}
                   <div className="flex items-center gap-4 mb-4">
-                    <link.icon className="w-8 h-8 text-white" />
+                    <link.icon className="w-8 h-8" />
                     <span className="text-3xl animate-bounce group-hover:scale-110 transition-transform duration-300">
                       {link.emoji}
                     </span>
@@ -147,24 +150,6 @@ const CommunitySection: React.FC = () => {
                   ))}
                 </div>
               </a>
-            </div>
-          ))}
-        </div>
-
-        {/* Community stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 animate-on-scroll">
-          {[
-            { label: "Crew Members", value: "500+", icon: "👥" },
-            { label: "Telegram Pirates", value: "500+", icon: "⚓" },
-            { label: "X Followers", value: "750+", icon: "🐦" }
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-6 rounded-xl bg-gradient-to-b from-gray-900/50 to-black/50 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer"
-            >
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>
